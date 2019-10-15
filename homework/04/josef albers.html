@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        .content {
+      width: 660px;
+      height: 500px;
+      margin: auto;
+      margin-top: 100px;
+      position: relative;
+    }
+
+    .grey-box {
+      width: 300px;
+      height: 500px;
+      background-color: #93A1AA;
+      position: absolute;
+      z-index: 2;
+      opacity: 0.5;
+      -webkit-animation-name: grey-box;
+      -webkit-animation-duration: 5s;
+      animation-duration: 3s;
+      animation-delay: 5s;
+      animation: MoveUpDown 1s linear infinite;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .black-box {
+      width: 500px;
+      height: 300px;
+      background-color: #2A2C2D;
+      position: absolute;
+      left: 200px;
+      top: 120px;
+      -webkit-animation: gradient 30s infinite;
+      animation-delay: 3s;
+
+    }
+
+    @-webkit-keyframes grey-box {
+      from {background-color: #93A1AA;}
+      to {background-color: red;}
+    }
+
+    @keyframes black-box {
+      from {background-color: #2A2C2D;}
+      to {background-color: yellow;}
+    }
+
+    @keyframes MoveUpDown {
+      0%, 100% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 200px;
+      }
+    }
+
+    @keyframes MoveLeftRight {
+      0%, 100% {
+        left: 0;
+      }
+      50% {
+        left: 200px;
+      }
+    }
+
+    @-webkit-keyframes gradient {
+      0% {background:red;}
+      25% {background:cyan;}
+      50% {background:yellow;}
+      75% {background:pink;}
+      100% {background:red;}
+}</style>
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="grey-box"></div>
+      <div class="black-box"></div>
+    </div>
+
+  </body>
+</html>
