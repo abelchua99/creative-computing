@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var color = 0
+		setInterval(
+			function() {
+				document.body.style.backgroundColor = "hsl("+ color +", 100%, 50%)";
+				color = color + 1;
+			},1000 / 30);
+
+
+
+	</script>
+</body>
+</html>
